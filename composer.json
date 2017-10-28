@@ -1,0 +1,14 @@
+{
+	"name": "gudehus/searchexcerpt",
+	"description": "Display only the part of a text which contains a given searchterm",
+	"type": "craft-plugin",
+	"authors": [
+		{
+			"name": "Jörg Gudehus",
+			"homepage": "http://joerggudehus.de"
+		}
+	],
+	"require": {
+		"composer/installers": "~1.0"
+	}
+}
