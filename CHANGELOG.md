@@ -4,7 +4,7 @@
 
 * Initial release
 
-##1.1 -- 2018-3-30
+## 1.1 -- 2018-3-30
 
 * Fixed a problem with case sensitivity
 
