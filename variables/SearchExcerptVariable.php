@@ -34,7 +34,7 @@ class SearchExcerptVariable
      */
     public function from($text, $term, $padding=20, $class='highlight')
     {        
-    	$start = max(0, strpos($text, $term) - $padding);
+    	$start = max(0, stripos($text, $term) - $padding);
     	$end = min(strlen($text), $start + strlen($term) + $padding);
     	
     	$excerpt = substr($text, $start, $padding * 2 + strlen($term));
@@ -46,7 +46,7 @@ class SearchExcerptVariable
     		$excerpt = preg_replace('/\s\S*$/', '', $excerpt) . ' …';
     	
     	
-    	$excerpt = str_replace($term, "<span class='" . $class . "'>" . $term . "</span>", $excerpt);
+		$excerpt = preg_replace("/\b(".$term.")\b/i", "<span class='" . $class . "'>$1</span>", $excerpt);
 
 		return new \Twig_Markup($excerpt, craft()->templates->getTwig()->getCharset());
     }
